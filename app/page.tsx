@@ -297,6 +297,12 @@ export default function Home() {
                   ecosystem melalui pengalaman business development dan market
                   reporting pada industri blockchain.
                 </p>
+                <div className="mt-5 rounded-md border border-line bg-mist p-4">
+                  <p className="text-sm font-bold text-navy">Bitget Wallet</p>
+                  <p className="mt-1 text-sm font-semibold text-slate">
+                    Business Development
+                  </p>
+                </div>
               </div>
             </div>
           </div>

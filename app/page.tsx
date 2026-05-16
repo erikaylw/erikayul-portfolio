@@ -21,7 +21,7 @@ import {
 
 const contactLinks = {
   email: "mailto:hello@erikayul.my.id",
-  whatsapp: "https://wa.me/",
+  whatsapp: "https://wa.me/6285784481922",
   linkedin: "https://www.linkedin.com/in/erika-yuliani-lukmawati-4a1714188",
   cv: "/cv-erika-yuliana.pdf"
 };

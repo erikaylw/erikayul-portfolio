@@ -1,7 +1,7 @@
+import Image from "next/image";
 import {
   ArrowUpRight,
   Award,
-  BriefcaseBusiness,
   Building2,
   CheckCircle2,
   Download,
@@ -16,8 +16,7 @@ import { SectionHeading } from "../components/SectionHeading";
 import {
   certifications,
   experiences,
-  expertiseGroups,
-  targetRoles
+  expertiseGroups
 } from "./portfolio-data";
 
 const contactLinks = {
@@ -52,22 +51,27 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="bg-white">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-24">
-          <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue/15 bg-sky px-4 py-2 text-sm font-semibold text-blue">
+      <section className="overflow-hidden bg-gradient-to-b from-white via-white to-mist">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 md:py-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:py-24">
+          <div className="order-2 animate-fade-up lg:order-1">
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-slate">
+              Erika Yuliani Lukmawati
+            </p>
+            <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-blue/15 bg-sky px-4 py-2 text-sm font-semibold text-blue">
               <ShieldCheck className="h-4 w-4" aria-hidden="true" />
               Tax Compliance • Financial Reporting • Bank Reconciliation
             </div>
-            <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight text-navy sm:text-6xl">
-              Erika Yuliani Lukmawati
-            </h1>
-            <p className="mt-4 text-2xl font-semibold text-blue">
+            <h1 className="mt-6 max-w-3xl text-4xl font-black leading-tight tracking-tight text-navy sm:text-6xl">
               Tax & Accounting Professional
-            </p>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate">
+            </h1>
+            <p className="mt-5 max-w-2xl text-xl font-semibold leading-8 text-blue">
               5+ Years Experience in Tax Compliance, Financial Reporting, and
               Bank Reconciliation.
+            </p>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-slate sm:text-lg">
+              Profesional Akuntansi dan Perpajakan dengan pengalaman lebih dari
+              5 tahun dalam tax compliance, pelaporan keuangan, rekonsiliasi
+              bank, dan administrasi perpajakan perusahaan.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -85,22 +89,43 @@ export default function Home() {
                 Contact Me
               </a>
             </div>
+            <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
+              {["Tax Staff", "Accounting Staff", "Finance Administration"].map(
+                (role) => (
+                  <div
+                    className="rounded-md border border-line bg-white/80 px-4 py-3 text-sm font-bold text-slate shadow-sm"
+                    key={role}
+                  >
+                    {role}
+                  </div>
+                )
+              )}
+            </div>
           </div>
 
-          <aside className="rounded-lg border border-line bg-mist p-6 shadow-soft">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-slate">
-              Target Roles
-            </p>
-            <div className="mt-5 grid gap-3">
-              {targetRoles.map((role) => (
-                <div
-                  className="flex items-center gap-3 rounded-md border border-line bg-white px-4 py-3 text-sm font-semibold"
-                  key={role}
-                >
-                  <CheckCircle2 className="h-4 w-4 text-blue" aria-hidden="true" />
-                  {role}
-                </div>
-              ))}
+          <aside className="order-1 animate-fade-up lg:order-2">
+            <div className="relative mx-auto max-w-[430px] rounded-[1.65rem] border border-line bg-white p-3 shadow-soft">
+              <div className="absolute -left-8 top-12 hidden h-28 w-28 rounded-full bg-sky blur-2xl lg:block" />
+              <div className="absolute -right-8 bottom-10 hidden h-32 w-32 rounded-full bg-blue/10 blur-2xl lg:block" />
+              <div className="relative overflow-hidden rounded-[1.25rem] bg-[#d9dde2]">
+                <Image
+                  src="/erika-yuliani-lukmawati-profile.png"
+                  alt="Professional headshot of Erika Yuliani Lukmawati, Tax and Accounting Professional"
+                  width={960}
+                  height={1200}
+                  priority
+                  sizes="(max-width: 768px) 92vw, 430px"
+                  className="aspect-[4/5] h-auto w-full object-cover object-center"
+                />
+              </div>
+              <div className="absolute bottom-7 left-7 right-7 rounded-lg border border-white/70 bg-white/90 p-4 shadow-soft backdrop-blur">
+                <p className="text-sm font-bold text-navy">
+                  Tax & Accounting Professional
+                </p>
+                <p className="mt-1 text-xs font-semibold text-slate">
+                  Compliance • Reporting • Reconciliation
+                </p>
+              </div>
             </div>
           </aside>
         </div>

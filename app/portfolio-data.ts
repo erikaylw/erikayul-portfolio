@@ -60,7 +60,7 @@ export const experiences = [
   {
     company: "PT Hongyi Asset Manajemen",
     role: "Staff Tax and Accounting",
-    period: "Februari 2026 - April 2026",
+    period: "Februari 2026 - Sekarang",
     highlights: [
       "Bookkeeping",
       "Rekonsiliasi bank",

@@ -8,13 +8,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#17202A",
+        navy: "#0F2742",
+        slate: "#475569",
         mist: "#F6F8FB",
-        leaf: "#2F855A",
-        coral: "#D96C4A"
+        line: "#E5EAF0",
+        blue: "#2563EB",
+        sky: "#EAF2FF"
       },
       boxShadow: {
-        soft: "0 20px 50px rgba(23, 32, 42, 0.12)"
+        soft: "0 18px 45px rgba(15, 39, 66, 0.10)"
       }
     }
   },

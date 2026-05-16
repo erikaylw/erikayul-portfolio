@@ -1,172 +1,210 @@
 import {
   ArrowUpRight,
+  Award,
   BriefcaseBusiness,
+  Building2,
+  CheckCircle2,
   Download,
+  FileSpreadsheet,
   GraduationCap,
+  Linkedin,
   Mail,
-  MapPin,
   MessageCircle,
-  Sparkles
+  ShieldCheck
 } from "lucide-react";
+import { SectionHeading } from "../components/SectionHeading";
+import {
+  certifications,
+  experiences,
+  expertiseGroups,
+  targetRoles
+} from "./portfolio-data";
 
-const skills = [
-  "Administrasi",
-  "Microsoft Office",
-  "Data Entry",
-  "Customer Service",
-  "Komunikasi",
-  "Manajemen Dokumen",
-  "Canva",
-  "Problem Solving"
-];
-
-const highlights = [
-  {
-    title: "Profil Profesional",
-    description:
-      "Terbiasa bekerja rapi, teliti, dan komunikatif untuk mendukung kebutuhan administrasi dan operasional."
-  },
-  {
-    title: "Siap Berkembang",
-    description:
-      "Menyukai proses belajar, adaptif dengan tools digital, dan terbuka untuk tantangan baru."
-  },
-  {
-    title: "Fokus Layanan",
-    description:
-      "Mengutamakan respons yang jelas, sopan, dan cepat dalam berkomunikasi dengan tim maupun pengguna."
-  }
-];
-
-const experiences = [
-  "Mengelola dokumen, data, dan kebutuhan administrasi secara terstruktur.",
-  "Membantu komunikasi operasional agar proses kerja berjalan lancar.",
-  "Menyusun materi sederhana, laporan, dan rekap data untuk kebutuhan tim."
-];
+const contactLinks = {
+  email: "mailto:hello@erikayul.my.id",
+  whatsapp: "https://wa.me/",
+  linkedin: "https://www.linkedin.com/",
+  cv: "/cv-erika-yuliana.pdf"
+};
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-mist text-ink">
-      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-        <a className="text-sm font-bold uppercase tracking-[0.18em]" href="#">
-          Erika Yuliana
-        </a>
-        <div className="hidden items-center gap-6 text-sm font-medium text-ink/70 sm:flex">
-          <a className="hover:text-ink" href="#about">
-            Tentang
+    <main className="min-h-screen bg-mist text-navy">
+      <nav className="sticky top-0 z-50 border-b border-line/80 bg-white/90 backdrop-blur">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+          <a className="text-sm font-bold tracking-[0.18em]" href="#">
+            ERIKA YULIANI
           </a>
-          <a className="hover:text-ink" href="#skills">
-            Skill
-          </a>
-          <a className="hover:text-ink" href="#contact">
-            Kontak
-          </a>
+          <div className="hidden items-center gap-6 text-sm font-semibold text-slate md:flex">
+            <a className="transition hover:text-blue" href="#about">
+              About
+            </a>
+            <a className="transition hover:text-blue" href="#expertise">
+              Expertise
+            </a>
+            <a className="transition hover:text-blue" href="#experience">
+              Experience
+            </a>
+            <a className="transition hover:text-blue" href="#contact">
+              Contact
+            </a>
+          </div>
         </div>
       </nav>
 
-      <section className="mx-auto grid max-w-6xl gap-10 px-5 pb-16 pt-8 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-24 lg:pt-16">
-        <div>
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white px-4 py-2 text-sm font-medium shadow-sm">
-            <Sparkles className="h-4 w-4 text-coral" aria-hidden="true" />
-            Portfolio Personal
-          </div>
-          <h1 className="max-w-3xl text-4xl font-black leading-tight sm:text-6xl">
-            Erika Yuliana
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-ink/72">
-            Profesional muda yang teliti, komunikatif, dan siap mendukung
-            kebutuhan administrasi, operasional, dan layanan dengan kerja yang
-            rapi serta bertanggung jawab.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-black"
-              href="mailto:hello@erikayul.my.id"
-            >
-              <Mail className="h-4 w-4" aria-hidden="true" />
-              Hubungi Saya
-            </a>
-            <a
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-ink/15 bg-white px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-ink/35"
-              href="/cv-erika-yuliana.pdf"
-            >
-              <Download className="h-4 w-4" aria-hidden="true" />
-              Unduh CV
-            </a>
-          </div>
-        </div>
-
-        <div className="relative overflow-hidden rounded-lg bg-ink p-7 text-white shadow-soft">
-          <div className="absolute right-0 top-0 h-32 w-32 bg-coral/30 blur-2xl" />
-          <div className="absolute bottom-0 left-0 h-32 w-32 bg-leaf/30 blur-2xl" />
-          <div className="relative">
-            <div className="mb-10 flex items-center justify-between">
-              <div>
-                <p className="text-sm text-white/55">Base</p>
-                <p className="font-semibold">Indonesia</p>
-              </div>
-              <MapPin className="h-8 w-8 text-coral" aria-hidden="true" />
+      <section className="bg-white">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-24">
+          <div>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue/15 bg-sky px-4 py-2 text-sm font-semibold text-blue">
+              <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+              Tax Compliance • Financial Reporting • Bank Reconciliation
             </div>
-            <p className="text-2xl font-bold leading-snug">
-              Siap membantu pekerjaan administrasi, komunikasi, dan koordinasi
-              dengan pendekatan yang tenang dan terorganisir.
+            <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight text-navy sm:text-6xl">
+              Erika Yuliani Lukmawati
+            </h1>
+            <p className="mt-4 text-2xl font-semibold text-blue">
+              Tax & Accounting Professional
             </p>
-            <div className="mt-10 grid grid-cols-2 gap-4">
-              <div className="rounded-md bg-white/10 p-4">
-                <p className="text-3xl font-black">8+</p>
-                <p className="mt-1 text-sm text-white/65">Skill utama</p>
-              </div>
-              <div className="rounded-md bg-white/10 p-4">
-                <p className="text-3xl font-black">100%</p>
-                <p className="mt-1 text-sm text-white/65">Siap belajar</p>
-              </div>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate">
+              5+ Years Experience in Tax Compliance, Financial Reporting, and
+              Bank Reconciliation.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-navy px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-blue"
+                href={contactLinks.cv}
+              >
+                <Download className="h-4 w-4" aria-hidden="true" />
+                Download CV
+              </a>
+              <a
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-line bg-white px-5 py-3 text-sm font-bold text-navy transition hover:-translate-y-0.5 hover:border-blue hover:text-blue"
+                href="#contact"
+              >
+                <Mail className="h-4 w-4" aria-hidden="true" />
+                Contact Me
+              </a>
             </div>
+          </div>
+
+          <aside className="rounded-lg border border-line bg-mist p-6 shadow-soft">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-slate">
+              Target Roles
+            </p>
+            <div className="mt-5 grid gap-3">
+              {targetRoles.map((role) => (
+                <div
+                  className="flex items-center gap-3 rounded-md border border-line bg-white px-4 py-3 text-sm font-semibold"
+                  key={role}
+                >
+                  <CheckCircle2 className="h-4 w-4 text-blue" aria-hidden="true" />
+                  {role}
+                </div>
+              ))}
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" className="section-offset bg-mist py-16">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="About Me"
+            title="Profesional akuntansi dan perpajakan yang teliti, analitis, dan siap mendukung kebutuhan corporate finance."
+            description="Profesional Akuntansi dan Perpajakan dengan pengalaman lebih dari 5 tahun dalam tax compliance, pelaporan keuangan, rekonsiliasi bank, dan administrasi perpajakan perusahaan. Berpengalaman menangani PPN, PPh 21, PPh 23, PPh 4 Ayat (2), SPT Masa dan Tahunan, serta menggunakan Accurate, Harmoni, Coretax, dan Microsoft Excel."
+          />
+          <div className="mt-8 grid gap-4 md:grid-cols-4">
+            {[
+              "Detail-oriented",
+              "Strong analytical skill",
+              "Administrative coordination",
+              "External coordination with consultants and government institutions"
+            ].map((item) => (
+              <div
+                className="rounded-lg border border-line bg-white p-5 text-sm font-semibold leading-6 text-navy shadow-sm"
+                key={item}
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section id="about" className="bg-white py-16">
+      <section id="expertise" className="section-offset bg-white py-16">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-coral">
-              Tentang
-            </p>
-            <h2 className="mt-3 text-3xl font-black sm:text-4xl">
-              Bekerja rapi, jelas, dan mudah diajak kolaborasi.
-            </h2>
-          </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {highlights.map((item) => (
+          <SectionHeading
+            eyebrow="Core Expertise"
+            title="Tax, accounting, software, and administration capability for corporate operations."
+          />
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {expertiseGroups.map((group) => (
               <article
-                className="rounded-lg border border-ink/10 bg-mist p-6"
-                key={item.title}
+                className="rounded-lg border border-line bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
+                key={group.title}
               >
-                <h3 className="text-lg font-bold">{item.title}</h3>
-                <p className="mt-3 leading-7 text-ink/70">{item.description}</p>
+                <div className="mb-5 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-sky text-blue">
+                    <FileSpreadsheet className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-bold text-navy">{group.title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      className="rounded-md border border-line bg-mist px-3 py-2 text-sm font-semibold text-slate"
+                      key={item}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="skills" className="py-16">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-leaf">
-              Skill
-            </p>
-            <h2 className="mt-3 text-3xl font-black sm:text-4xl">
-              Kemampuan yang siap dipakai.
-            </h2>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span
-                className="rounded-md border border-ink/10 bg-white px-4 py-3 text-sm font-semibold shadow-sm"
-                key={skill}
+      <section id="experience" className="section-offset bg-mist py-16">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Professional Experience"
+            title="Corporate tax and accounting experience across compliance, reporting, reconciliation, and coordination."
+          />
+          <div className="mt-10 space-y-5">
+            {experiences.map((experience) => (
+              <article
+                className="rounded-lg border border-line bg-white p-6 shadow-sm"
+                key={`${experience.company}-${experience.period}`}
               >
-                {skill}
-              </span>
+                <div className="grid gap-4 md:grid-cols-[0.8fr_1.2fr]">
+                  <div>
+                    <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue">
+                      {experience.period}
+                    </p>
+                    <h3 className="mt-3 text-2xl font-bold text-navy">
+                      {experience.company}
+                    </h3>
+                    <p className="mt-2 font-semibold text-slate">
+                      {experience.role}
+                    </p>
+                  </div>
+                  <ul className="grid gap-3 sm:grid-cols-2">
+                    {experience.highlights.map((highlight) => (
+                      <li
+                        className="flex gap-3 text-sm font-medium leading-6 text-slate"
+                        key={highlight}
+                      >
+                        <CheckCircle2
+                          className="mt-1 h-4 w-4 shrink-0 text-blue"
+                          aria-hidden="true"
+                        />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -175,69 +213,131 @@ export default function Home() {
       <section className="bg-white py-16">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-2">
           <div>
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-coral text-white">
-              <BriefcaseBusiness className="h-6 w-6" aria-hidden="true" />
-            </div>
-            <h2 className="text-3xl font-black">Experience</h2>
-            <ul className="mt-6 space-y-4">
-              {experiences.map((item) => (
-                <li className="rounded-lg border border-ink/10 p-5" key={item}>
-                  {item}
-                </li>
+            <SectionHeading
+              eyebrow="Certifications"
+              title="Professional tax and accounting certifications."
+            />
+            <div className="mt-8 grid gap-4">
+              {certifications.map((certification) => (
+                <div
+                  className="flex items-center gap-4 rounded-lg border border-line bg-mist p-5"
+                  key={certification}
+                >
+                  <Award className="h-6 w-6 text-blue" aria-hidden="true" />
+                  <p className="font-bold text-navy">{certification}</p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
           <div>
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-leaf text-white">
-              <GraduationCap className="h-6 w-6" aria-hidden="true" />
+            <SectionHeading
+              eyebrow="Education"
+              title="Academic foundation in accounting."
+            />
+            <div className="mt-8 rounded-lg border border-line bg-mist p-6">
+              <div className="flex items-start gap-4">
+                <GraduationCap className="h-7 w-7 text-blue" aria-hidden="true" />
+                <div>
+                  <h3 className="text-xl font-bold text-navy">
+                    Universitas Wijaya Kusuma Surabaya
+                  </h3>
+                  <p className="mt-2 font-semibold text-slate">
+                    S1 Akuntansi | IPK 3,61 | Cumlaude
+                  </p>
+                  <ul className="mt-5 space-y-3 text-sm font-medium leading-6 text-slate">
+                    <li>Finalis National Capital Market Championship 2019</li>
+                    <li>Relawan Pajak / Pojok Pajak</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <h2 className="text-3xl font-black">Project & Sertifikat</h2>
-            <p className="mt-6 leading-8 text-ink/70">
-              Area ini disiapkan untuk menampilkan project, sertifikat, atau
-              pengalaman terbaru. Konten bisa ditambahkan setelah website
-              online tanpa mengubah struktur utama.
-            </p>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-        <div className="rounded-lg bg-ink p-8 text-white sm:p-10">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-coral">
-            Kontak
-          </p>
-          <h2 className="mt-3 max-w-2xl text-3xl font-black sm:text-4xl">
-            Terbuka untuk peluang kerja, kolaborasi, dan percakapan profesional.
-          </h2>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-bold text-ink"
-              href="mailto:hello@erikayul.my.id"
-            >
-              <Mail className="h-4 w-4" aria-hidden="true" />
-              Email
-            </a>
-            <a
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-5 py-3 text-sm font-bold"
-              href="https://wa.me/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <MessageCircle className="h-4 w-4" aria-hidden="true" />
-              WhatsApp
-            </a>
-            <a
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-5 py-3 text-sm font-bold"
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </a>
+      <section className="bg-mist py-16">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="rounded-lg border border-line bg-white p-6">
+            <div className="flex items-start gap-4">
+              <Building2 className="h-6 w-6 text-blue" aria-hidden="true" />
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue">
+                  Additional Experience
+                </p>
+                <h2 className="mt-2 text-2xl font-bold text-navy">
+                  Digital Finance & Web3 Exposure
+                </h2>
+                <p className="mt-3 max-w-3xl leading-8 text-slate">
+                  Memiliki exposure tambahan dalam digital finance dan Web3
+                  ecosystem melalui pengalaman business development dan market
+                  reporting pada industri blockchain.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      <section id="contact" className="section-offset bg-navy py-16 text-white">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue">
+                Contact
+              </p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                Available for Tax, Accounting, and Finance Administration roles.
+              </h2>
+              <p className="mt-4 leading-8 text-white/70">
+                Terbuka untuk peluang Tax Staff, Tax Administration, Tax &
+                Accounting Staff, Finance Administration, dan Accounting Staff.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <a
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-bold text-navy transition hover:-translate-y-0.5"
+                href={contactLinks.email}
+              >
+                <Mail className="h-4 w-4" aria-hidden="true" />
+                Email
+              </a>
+              <a
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:bg-white/10"
+                href={contactLinks.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                WhatsApp
+              </a>
+              <a
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:bg-white/10"
+                href={contactLinks.linkedin}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Linkedin className="h-4 w-4" aria-hidden="true" />
+                LinkedIn
+                <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-blue px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-blue/90"
+                href={contactLinks.cv}
+              >
+                <Download className="h-4 w-4" aria-hidden="true" />
+                Download CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-line bg-white px-5 py-6 text-center text-sm font-medium text-slate">
+        <p>
+          Erika Yuliani Lukmawati - Tax & Accounting Professional - Tax
+          Compliance, Financial Reporting, Bank Reconciliation
+        </p>
+      </footer>
     </main>
   );
 }

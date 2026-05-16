@@ -7,17 +7,30 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://erikayul.my.id"),
   title: {
-    default: "Erika Yuliana | Portfolio",
-    template: "%s | Erika Yuliana"
+    default: "Erika Yuliani Lukmawati | Tax & Accounting Professional",
+    template: "%s | Erika Yuliani Lukmawati"
   },
   description:
-    "Portfolio Erika Yuliana, menampilkan profil, skill, pengalaman, project, dan kontak profesional.",
+    "Tax & Accounting Professional with 5+ years experience in tax compliance, financial reporting, bank reconciliation, Coretax, e-SPT, PPN, and PPh.",
+  keywords: [
+    "Tax Staff",
+    "Accounting Staff",
+    "Tax Compliance",
+    "Tax Administration",
+    "Financial Reporting",
+    "Bank Reconciliation",
+    "Coretax",
+    "e-SPT",
+    "PPN",
+    "PPh",
+    "Erika Yuliani Lukmawati"
+  ],
   openGraph: {
-    title: "Erika Yuliana | Portfolio",
+    title: "Erika Yuliani Lukmawati | Tax & Accounting Professional",
     description:
-      "Profil profesional Erika Yuliana dengan ringkasan skill, project, pengalaman, dan kontak.",
+      "Portfolio profesional untuk Tax Staff, Tax & Accounting Staff, Finance Administration, dan Accounting Staff.",
     url: "https://erikayul.my.id",
-    siteName: "Erika Yuliana Portfolio",
+    siteName: "Erika Yuliani Lukmawati Portfolio",
     locale: "id_ID",
     type: "website"
   }

@@ -17,7 +17,7 @@ html {
 body {
   margin: 0;
   background: #f6f8fb;
-  color: #17202a;
+  color: #0f2742;
 }
 
 a {
@@ -26,6 +26,10 @@ a {
 }
 
 ::selection {
-  background: #d96c4a;
+  background: #2563eb;
   color: white;
+}
+
+.section-offset {
+  scroll-margin-top: 96px;
 }

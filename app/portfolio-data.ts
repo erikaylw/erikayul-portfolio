@@ -99,7 +99,7 @@ export const certifications = [
   },
   {
     title: "Brevet C Perpajakan",
-    image: null,
+    image: "/certificate-brevet-c.jpeg",
     alt: "Sertifikat Brevet C Perpajakan Erika Yuliani Lukmawati"
   },
   {

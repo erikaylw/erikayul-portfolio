@@ -104,7 +104,7 @@ export const certifications = [
   },
   {
     title: "CPSSOFT Accurate",
-    image: null,
+    image: "/certificate-accurate.jpeg",
     alt: "Sertifikat CPSSOFT Accurate Erika Yuliani Lukmawati"
   },
   {

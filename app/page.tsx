@@ -242,15 +242,32 @@ export default function Home() {
               eyebrow="Certifications"
               title="Professional tax and accounting certifications."
             />
-            <div className="mt-8 grid gap-4">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {certifications.map((certification) => (
-                <div
-                  className="flex items-center gap-4 rounded-lg border border-line bg-mist p-5"
-                  key={certification}
+                <article
+                  className="overflow-hidden rounded-lg border border-line bg-mist shadow-sm"
+                  key={certification.title}
                 >
-                  <Award className="h-6 w-6 text-blue" aria-hidden="true" />
-                  <p className="font-bold text-navy">{certification}</p>
-                </div>
+                  <div className="relative aspect-[4/3] border-b border-line bg-white">
+                    {certification.image ? (
+                      <Image
+                        src={certification.image}
+                        alt={certification.alt}
+                        fill
+                        sizes="(max-width: 768px) 92vw, 260px"
+                        className="object-contain p-2"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center px-5 text-center text-sm font-semibold leading-6 text-slate">
+                        Foto sertifikat akan ditambahkan
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-3 p-5">
+                    <Award className="h-5 w-5 shrink-0 text-blue" aria-hidden="true" />
+                    <p className="font-bold text-navy">{certification.title}</p>
+                  </div>
+                </article>
               ))}
             </div>
           </div>

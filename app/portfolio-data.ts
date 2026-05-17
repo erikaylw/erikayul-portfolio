@@ -92,9 +92,26 @@ export const experiences = [
 ];
 
 export const certifications = [
-  "Brevet AB Perpajakan",
-  "Brevet C Perpajakan",
-  "CPSSOFT Accurate"
+  {
+    title: "Brevet AB Perpajakan",
+    image: "/certificate-brevet-ab.jpeg",
+    alt: "Sertifikat Brevet AB Perpajakan Erika Yuliani Lukmawati"
+  },
+  {
+    title: "Brevet C Perpajakan",
+    image: null,
+    alt: "Sertifikat Brevet C Perpajakan Erika Yuliani Lukmawati"
+  },
+  {
+    title: "CPSSOFT Accurate",
+    image: null,
+    alt: "Sertifikat CPSSOFT Accurate Erika Yuliani Lukmawati"
+  },
+  {
+    title: "Relawan Pajak",
+    image: null,
+    alt: "Sertifikat Relawan Pajak Erika Yuliani Lukmawati"
+  }
 ];
 
 export const targetRoles = [

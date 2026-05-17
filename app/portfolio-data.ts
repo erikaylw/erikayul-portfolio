@@ -109,7 +109,7 @@ export const certifications = [
   },
   {
     title: "Relawan Pajak",
-    image: null,
+    image: "/certificate-relawan-pajak.jpeg",
     alt: "Sertifikat Relawan Pajak Erika Yuliani Lukmawati"
   }
 ];

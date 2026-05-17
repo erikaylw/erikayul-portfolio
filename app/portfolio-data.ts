@@ -45,6 +45,18 @@ export const expertiseGroups = [
 
 export const experiences = [
   {
+    company: "PT Hongyi Asset Manajemen",
+    role: "Staff Tax and Accounting",
+    period: "Februari 2026 - Sekarang",
+    highlights: [
+      "Bookkeeping",
+      "Rekonsiliasi bank",
+      "Laporan keuangan bilingual",
+      "Tax planning coordination",
+      "Reporting to Taiwan accountant"
+    ]
+  },
+  {
     company: "PT Harapan Sakti Utama",
     role: "Staff Tax and Accounting",
     period: "Juni 2021 - Januari 2026",
@@ -55,18 +67,6 @@ export const experiences = [
       "Laporan keuangan",
       "Restrukturisasi operasional perusahaan",
       "Pengelolaan pajak antar entitas"
-    ]
-  },
-  {
-    company: "PT Hongyi Asset Manajemen",
-    role: "Staff Tax and Accounting",
-    period: "Februari 2026 - Sekarang",
-    highlights: [
-      "Bookkeeping",
-      "Rekonsiliasi bank",
-      "Laporan keuangan bilingual",
-      "Tax planning coordination",
-      "Reporting to Taiwan accountant"
     ]
   },
   {

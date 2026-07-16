@@ -1,9 +1,36 @@
+/* Hallmark · macrostructure: Stat-Led · genre: modern-minimal · theme: custom (warm navy + amber) · tone: editorial-professional */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   color-scheme: light;
+
+  /* Token block — locked per Hallmark discipline */
+  --color-paper: oklch(98.5% 0.005 260);
+  --color-paper-2: oklch(96% 0.01 260);
+  --color-ink: oklch(20% 0.035 260);
+  --color-ink-2: oklch(50% 0.025 260);
+  --color-rule: oklch(88% 0.01 260);
+  --color-accent: oklch(65% 0.15 70);
+  --color-accent-ink: oklch(98% 0 0);
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-short: 220ms;
+  --dur-reveal: 600ms;
 }
 
 * {
@@ -12,12 +39,15 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
-  background: #f6f8fb;
-  color: #0f2742;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -26,26 +56,61 @@ a {
 }
 
 ::selection {
-  background: #2563eb;
-  color: white;
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
 }
 
-.section-offset {
-  scroll-margin-top: 96px;
+/* Section scroll offset */
+.section-anchor {
+  scroll-margin-top: 5rem;
 }
 
-@keyframes fade-up {
+/* --- Counter animation for Stat-Led hero --- */
+@keyframes count-up {
   from {
     opacity: 0;
-    transform: translateY(18px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0.5em);
   }
 }
 
-.animate-fade-up {
-  animation: fade-up 700ms ease-out both;
+.stat-figure {
+  animation: count-up var(--dur-reveal) var(--ease-out) both;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Fade-in on scroll --- */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  animation: fade-in var(--dur-reveal) var(--ease-out) both;
+}
+
+/* --- Nav pill scroll effect --- */
+.nav-pill {
+  transition: background var(--dur-short) var(--ease-out),
+    box-shadow var(--dur-short) var(--ease-out);
+}
+
+/* --- Responsive --- */
+@media (prefers-reduced-motion: reduce) {
+  .stat-figure {
+    animation: none;
+    opacity: 1;
+  }
+  .reveal.visible {
+    animation: none;
+    opacity: 1;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

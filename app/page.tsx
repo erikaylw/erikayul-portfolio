@@ -90,7 +90,7 @@ function Nav() {
       className={`nav-pill fixed left-1/2 top-4 z-50 -translate-x-1/2 rounded-full border px-5 py-2 text-sm font-semibold ${
         scrolled
           ? "border-line/60 bg-white/95 shadow-soft backdrop-blur"
-          : "border-transparent bg-transparent"
+          : "border-line/40 bg-white/90 shadow-sm"
       }`}
     >
       <div className="flex items-center gap-6">

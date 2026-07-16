@@ -44,7 +44,7 @@ export default function Home() {
                 5+
               </div>
               <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light px-4 py-1.5 text-sm font-semibold text-accent">
-                Staff Tax and Accounting
+                Business Development · Account Manager ｜ Bitget Wallet
               </p>
               <h1 className="mt-3 font-display text-3xl font-bold leading-tight tracking-tight text-navy sm:text-5xl">
                 Years Experience.

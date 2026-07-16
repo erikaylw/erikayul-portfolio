@@ -39,16 +39,19 @@ export default function Home() {
         {/* ═══ HERO ═══ */}
         <section className="overflow-hidden pt-24 sm:pt-28">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 sm:px-8 md:pb-24 lg:grid-cols-[1.1fr_0.9fr]">
-            <div>
-              <div className="font-display text-7xl font-bold leading-none tracking-tight text-accent sm:text-8xl lg:text-9xl">
+            <div className="pt-4 sm:pt-8">
+              <div className="font-display text-6xl font-bold leading-none tracking-tight text-accent sm:text-7xl lg:text-8xl">
                 5+
               </div>
-              <h1 className="mt-2 font-display text-3xl font-bold leading-tight tracking-tight text-navy sm:text-5xl">
+              <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light px-4 py-1.5 text-sm font-semibold text-accent">
+                Staff Tax and Accounting
+              </p>
+              <h1 className="mt-3 font-display text-3xl font-bold leading-tight tracking-tight text-navy sm:text-5xl">
                 Years Experience.
                 <br />
                 <span className="text-ink-2">Tax & Accounting Professional.</span>
               </h1>
-              <p className="mt-5 max-w-xl text-base leading-7 text-slate sm:text-lg">
+              <p className="mt-4 max-w-xl text-base leading-7 text-slate sm:text-lg">
                 Profesional Akuntansi dan Perpajakan — specialis dalam tax compliance, pelaporan keuangan,
                 rekonsiliasi bank, dan administrasi perpajakan perusahaan.
               </p>
